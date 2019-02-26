@@ -9,6 +9,34 @@ const taskInput = document.querySelector('#task');
 loadEventListeners();
 
 
-function loadEventListeners( {
+function loadEventListeners() {
   form.addEventListener('submit', addTask);
-})
+}
+
+
+// Add Task
+function addTask(e) {
+if(taskInput.value === '') {
+  alert('Add a task');
+}
+
+// Create li element 
+const li = document.createElement('li');
+li.className = 'collection-item';
+li.appendChild(document.createTextNode(taskInput.value));
+
+// Create new link
+const link = document.createElement('a');
+link.className = "delete-item secondary-content";
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+li.appendChild(link);
+
+// Append li to ul
+taskList.appendChild(li);
+
+// Clear input
+taskInput.value == '';
+
+  e.preventDefault();
+}
