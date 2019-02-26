@@ -29,7 +29,7 @@ li.appendChild(document.createTextNode(taskInput.value));
 const link = document.createElement('a');
 link.className = "delete-item secondary-content";
 // Add icon html
-link.innerHTML = '<i class="fas fa-minus"></i>';
+link.innerHTML = '<i class="fas fa-times"></i>';
 li.appendChild(link);
 
 // Append li to ul
