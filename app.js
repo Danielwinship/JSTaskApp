@@ -37,7 +37,7 @@ li.appendChild(link);
 taskList.appendChild(li);
 
 // Clear input
-taskInput.value == '';
+taskInput.value = '';
 
   e.preventDefault();
 }
