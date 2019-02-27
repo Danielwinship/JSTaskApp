@@ -12,6 +12,7 @@ loadEventListeners();
 function loadEventListeners() {
   // DOM Load event
   document.addEventListener('DOMContentLoaded', getTasks);
+  
   form.addEventListener('submit', addTask);
   taskList.addEventListener('click', removeTask);
   clearBtn.addEventListener('click', clearTasks);
