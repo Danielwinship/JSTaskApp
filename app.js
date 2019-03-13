@@ -1,3 +1,10 @@
+class Task {
+  constructor(title) {
+    this.title = title;
+  } 
+}
+
+
 // Define UI Vars
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
@@ -53,10 +60,14 @@ if(taskInput.value === '') {
   alert('Add a task');
 }
 
+const task = new Task();
+
+task.title = taskInput.value;
+
 // Create li element 
 const li = document.createElement('li');
 li.className = 'collection-item';
-li.appendChild(document.createTextNode(taskInput.value));
+li.appendChild(document.createTextNode(task.title));
 
 // Create new link
 const link = document.createElement('a');
